@@ -1,7 +1,7 @@
 # Array
 Top 20 questions and their solutuion with Practical Use case
 
-#1 . What is an array in JavaScript, and how does it differ from an object?
+<h1> #1 . What is an array in JavaScript, and how does it differ from an object?</h1>h1>
 Ans: An arry is order list of values . while an object stpres key-value pairs
 Ex.  ```let arr= [1,'two',3,4]```
 
