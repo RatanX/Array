@@ -15,10 +15,9 @@ Ex.  ```let arr= [1,'two',3,4]```
 ===============================================================================================
 <h2> #2 . How do you create an array in JavaScript? </h2> 
 
-Ans: using [], new Array(), Array.of()
-Ex. ``` let a= [1,2] ```
-``` let b= new Array(3) ```
-``` let c= Array.of(1,3) ```
+Ans: using [], new Array(), Array.of() 
+Ex.  let a= [1,2]    let b= new Array(3)    let c= Array.of(1,3) 
+
 ===============================================================================================
 <h2> #3. What is the default behavior when accessing an array index that does not exist?</h2>
 
@@ -197,10 +196,9 @@ Removed item: [
 
     //Rules:
 If a - b is negative, then a comes before b
-
-If a - b is positive, then a comes after b
-
-If a - b is 0, the order stays the same  
+If a - b is positive, then a comes after b 
+If a - b is 0, the order stays the same
+ 
 ====================================================================================================================
  <h2>What does the includes() method do? How is it different from indexOf()?</h2>
  Ans: 
