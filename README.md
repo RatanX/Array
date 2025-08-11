@@ -1,6 +1,9 @@
 # Array
 Top 20 questions and their solutuion with Practical Use case
-                   <h1>🛠️ Section 2: 10 Most Asked Array Methods</h1>
+                   <h1 style='color:blue'>🛠️ Section 2: 10 Most Asked Array Methods</h1>
+
+
+
 
 ==============================================================================================
 <h2> #1 . What is an array in JavaScript, and how does it differ from an object? </h2>
@@ -51,7 +54,7 @@ console.log(A[10]); ------ "undefine" but it is empty(because it's a hole)
 console.log(10 in A)---------- false (index 10 does NOT exist
 
 ======================================================================================================
-                  <h1>🛠️ Section 2: 10 Most Asked Array Methods</h1>
+                  <h1 style='color:blue'>🛠️ Section 2: 10 Most Asked Array Methods</h1>
 
 <h2> #6. What is the difference between map() and forEach()? When would you use one over the other?</h2>
 
@@ -134,7 +137,7 @@ Ans:
  // Note: this function mutate/change the original array
 
  ===================================================================================================
- <h2> #9 What does Array.prototype.splice() do, and how is it different from slice()?</h2>
+ <h2> #10 What does Array.prototype.splice() do, and how is it different from slice()?</h2>
  Ans:  syntex: 
        splice(startingindex,deletecount,iteminsert1,iteminsert2)
             spliec:it deletes the items from starting index to upto deleted number provide in deletcount ,as per we deside 
@@ -174,12 +177,65 @@ Ans:
 Removed item: [
      { id: 2, name: "Phone", qty: 2 }
 ]
-           
 
+ ===================================================================================================================
+ <h2> #11. How would you sort an array of numbers correctly in JavaScript? Why doesn’t .sort() work as expected by default?</h2> by using short we can sort in ascending or descending order.
+  Ans: short work unexpected by default because it convert arry element into string first by default and compare ascii value     of utf-16 encoded of each element, when checking it check first digit to deside utf code hence in 100, 1(utf16 value 49) less than 2 (utf-16 value 50) in  25, so it think 25 is gratert than 100.
+
+  understand by example, also how modifiy to get work done properly--
+
+     const numbers = [10, 5, 40, 25, 100];
+     numbers.sort();
+    console.log(numbers);
+
+    numbers.sort((a,b)=> a-b)  // for ascending
+     console.log(numbers)
+     
+      numbers.sort((a,b)=> a-b)  // for descending
+     console.log(numbers)
+
+    //Rules:
+If a - b is negative, then a comes before b
+
+If a - b is positive, then a comes after b
+
+If a - b is 0, the order stays the same  
+====================================================================================================================
+ <h2>What does the includes() method do? How is it different from indexOf()?</h2>
+ Ans: 
+ include()
+          It takes parameter 
+ Purpose: Checks if a given value is present.
+ Returns: A boolean (true or false).
+
+ indexOf(), It takes parameter 
+ Purpose: Finds the first index of a given value.
+ Returns: The index of the value, or -1 if not found.
        
+   //INCLUDE use case: --check admin is available if true access grant     
        
+        const userRole = "editor";
+        const allowedRoles = ["admin", "editor", "moderator"];
         
+        if (allowedRoles.includes(userRole)) {
+        console.log("Access granted."); //------True
+        } else {
+        console.log("Access denied.");}
+
+
         
+//indexOf use case: -- check user if folloing if true give index no, if false give -1. then we can unfollow by using slice
+
+        let following = ["alice", "bob", "charlie"];
+        const userToUnfollow = "bob";
+        
+        const index = following.indexOf(userToUnfollow);
+        if (index !== -1) {
+        following.splice(index, 1);
+        console.log(`${userToUnfollow} unfollowed.`);
+        } else {
+        console.log(`${userToUnfollow} is not in your following list.`);}
+
 
         
 
