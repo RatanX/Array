@@ -200,7 +200,7 @@ If a - b is positive, then a comes after b
 If a - b is 0, the order stays the same
  
 ====================================================================================================================
- <h2>What does the includes() method do? How is it different from indexOf()?</h2>
+ <h2>#12 What does the includes() method do? How is it different from indexOf()?</h2>
  Ans: 
  include()
           It takes parameter 
@@ -236,7 +236,60 @@ If a - b is 0, the order stays the same
         console.log(`${userToUnfollow} is not in your following list.`);}
 
 
+
+
+
+
+ <h2>#13 Reverse The array?</h2>
+ Ans: BYreverse function and by reduce function
+      
+        //By reduce()
         
+        let array = [5, 6, 7, 8]
+        let reverse = array.reduce((acc,curr)=> 
+        { 
+        return [curr,...acc] 
+        },[]
+        )
+        console.log(reverse )
+        
+        //By reverse()
+
+        let another_arr= [9,8,7,6]
+        let reverse_arr=  another_arr.reverse()
+        console.log(reverse_arr)
+
+
+
+-------------------------------------------------------------------------------------------------------
+=======================================================================================================
+-------------------------------------------------------------------------------------------------------
+
+Q. Find the second largest number in an array.[it has little complex solution but if we choose to solve in step by using first step in another then it is easy like- firt we short in descending(biggest to smallest), then we relect index1, that is second largest value]   it take more time space(less efficient)
+
+     let array = [5, 6, 7, 8]
+     let bigtosmall=array.sort((a,b)=> b-a)
+     console.log(bigtosmall[1])
+     console.log(array)
+
+     //this .sort() change original so firt make copy by spread operator like-  newArr=[...array]
+
+Q. Find all pairs in an array that sum to a target.
+
+
+--------------x---------------
+Q. Check if two arrays are equal.        
+
+     function arraysEqual(arr1, arr2) {
+    if (arr1.length !== arr2.length) return false;
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] !== arr2[i]) return false;
+    }
+    return true;}
+
+// Example
+console.log(arraysEqual([1, 2, 3], [1, 2, 3]));  // Output: true
+console.log(arraysEqual([1, 2, 3], [3, 2, 1]));  // Output: false
 
   
 
